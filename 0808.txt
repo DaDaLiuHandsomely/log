@@ -1,0 +1,42 @@
+1、split()
+      split() 方法用于把一个字符串分割成字符串数组。
+参数                   	描述
+separator           	必需。字符串或正则表达式，从该参数指定的地方分割 stringObject。
+howmany	           可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这    个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。
+例子 1
+在本例中，我们将按照不同的方式来分割字符串：
+
+var str="How are you doing today?"
+document.write(str.split(" ") + "<br />")
+document.write(str.split("") + "<br />")
+document.write(str.split(" ",3))
+
+输出：
+How,are,you,doing,today?
+H,o,w, ,a,r,e, ,y,o,u, ,d,o,i,n,g, ,t,o,d,a,y,?
+How,are,you
+
+例子 2
+在本例中，我们将分割结构更为复杂的字符串：
+"2:3:4:5".split(":")	//将返回["2", "3", "4", "5"]
+"|a|b|c".split("|")	//将返回["", "a", "b", "c"]
+
+例子 3
+使用下面的代码，可以把句子分割成单词：
+var words = sentence.split(' ')
+或者使用正则表达式作为 separator：
+var words = sentence.split(/\s+/)
+
+例子 4
+如果您希望把单词分割为字母，或者把字符串分割为字符，可使用下面的代码：
+"hello".split("")	//可返回 ["h", "e", "l", "l", "o"]
+若只需要返回一部分字符，请使用 howmany 参数：
+"hello".split("", 3)	//可返回 ["h", "e", "l"]
+
+
+2、drawImage()中也可以只有5个参数
+img 	       规定要使用的图像、画布或视频。
+x 	            在画布上放置图像的 x 坐标位置。
+		y 	            在画布上放置图像的 y 坐标位置。
+width      		可选。要使用的图像的宽度。（伸展或缩小图像）
+		height     		可选。要使用的图像的高度。（伸展或缩小图像）
