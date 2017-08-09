@@ -1,0 +1,96 @@
+1、碰撞消失
+function touch(x1,y1,w1,h1,x2,y2,w2,h2){
+   	if(x1>x2+w2 || y1>y2+h2 || x1+w1<x2 || y1+h1<h2){
+      		return false;
+   	}else{
+      		return true;
+   	}
+}
+
+2、canvas画布
+rotate()
+定义和用法
+rotate() 方法旋转画布的坐标系统。
+参数
+	旋转的量，用弧度表示。正值表示顺时针方向旋转，负值表示逆时针方向旋转。
+
+beginPath()
+定义和用法
+beginPath() 方法在一个画布中开始子路径的一个新的集合。
+描述
+beginPath() 丢弃任何当前定义的路径并且开始一条新的路径。它把当前的点设置为 (0,0)。
+当一个画布的环境第一次创建，beginPath() 方法会被显式地调用。
+
+strokeStyle
+定义和用法
+strokeStyle 属性设置或返回用于笔触的颜色、渐变或模式。
+默认值：	#000000
+JavaScript 语法：	context.strokeStyle=color|gradient|pattern;
+属性值
+值	             描述
+color        	指示绘图笔触颜色的 CSS 颜色值。默认值是 #000000。
+gradient   	用于填充绘图的渐变对象（线性或放射性）
+pattern     	用于创建 pattern 笔触的 pattern 对象
+
+fillStyle
+定义和用法
+fillStyle 属性设置或返回用于填充绘画的颜色、渐变或模式。
+默认值：	#000000
+JavaScript 语法：	context.fillStyle=color|gradient|pattern;
+属性值
+值	             描述
+color        指示绘图填充色的 CSS 颜色值。默认值是 #000000。
+gradient	   用于填充绘图的渐变对象（线性或放射性）
+pattern     	用于填充绘图的 pattern 对象
+
+arc()
+定义和用法
+arc() 方法创建弧/曲线（用于创建圆或部分圆）。
+JavaScript 语法：
+context.arc(x,y,r,sAngle,eAngle,counterclockwise);
+参数值
+参数	描述
+x	圆的中心的 x 坐标。
+y	圆的中心的 y 坐标。
+r	圆的半径。
+sAngle	起始角，以弧度计。（弧的圆形的三点钟位置是 0 度）。
+eAngle	结束角，以弧度计。
+counterclockwise	可选。规定应该逆时针还是顺时针绘图。False = 顺时针，true = 逆时针。
+
+fill()
+定义和用法
+fill() 方法填充当前的图像（路径）。默认颜色是黑色。
+注释：如果路径未关闭，那么 fill() 方法会从路径结束点到开始点之间添加一条线，以关闭该路径，然后填充该路径。
+
+stroke()
+定义和用法
+stroke() 方法会实际地绘制出通过 moveTo() 和 lineTo() 方法定义的路径。默认颜色是黑色。
+
+closePath()
+定义和用法
+closePath() 方法创建从当前点到开始点的路径。
+
+3、Math.pow()
+定义和用法
+pow() 方法可返回 x 的 y 次幂的值。
+语法
+Math.pow(x,y)
+参数   	描述
+x	        必需。底数。必须是数字。
+y	        必需。幂数。必须是数字。
+
+
+
+
+
+1、碰撞消失
+2、canvas画布
+rotate()
+beginPath()
+strokeStyle
+fillStyle
+arc()
+fill()
+stroke()
+closePath()
+3、Math.pow()
